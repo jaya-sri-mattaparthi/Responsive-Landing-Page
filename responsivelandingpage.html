@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoFlow - Clean Energy Startup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body { line-height: 1.6; }
+    header {
+      background: url('https://source.unsplash.com/1600x900/?solar,energy') no-repeat center center/cover;
+      height: 100vh; color: white;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 0 20px;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 20px; }
+    header p { font-size: 1.2rem; margin-bottom: 30px; }
+    .btn {
+      background: #28a745; color: white;
+      padding: 12px 25px; border: none;
+      border-radius: 5px; font-size: 1rem;
+      cursor: pointer;
+    }
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .features, .testimonials, .pricing {
+      display: grid; gap: 20px;
+    }
+    .features { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .feature-card {
+      padding: 20px; border: 1px solid #ddd; border-radius: 8px;
+      text-align: center;
+    }
+    .feature-card i { font-size: 2rem; margin-bottom: 10px; color: #28a745; }
+
+    .testimonials {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .testimonial {
+      border-left: 5px solid #28a745; padding: 15px;
+      background: #f9f9f9;
+    }
+    .testimonial p { font-style: italic; }
+    .testimonial strong { display: block; margin-top: 10px; }
+
+    .pricing {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .plan {
+      border: 2px solid #28a745; border-radius: 8px;
+      padding: 20px; text-align: center;
+    }
+    .plan h3 { margin-bottom: 15px; }
+    .plan ul { list-style: none; margin: 20px 0; }
+    .plan ul li { margin-bottom: 10px; }
+
+    form {
+      display: grid; gap: 15px; max-width: 500px;
+      margin: auto; text-align: left;
+    }
+    form input, form textarea {
+      padding: 10px; width: 100%; border: 1px solid #ccc; border-radius: 5px;
+    }
+    footer {
+      background: #222; color: #fff; text-align: center;
+      padding: 20px; margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>EcoFlow</h1>
+      <p>Clean energy for a brighter tomorrow</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Get Started</button>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-solar-panel"></i>
+      <h3>Solar Solutions</h3>
+      <p>Affordable and scalable solar panel installations for homes and businesses.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-bolt"></i>
+      <h3>Battery Storage</h3>
+      <p>Store your power efficiently with our smart battery solutions.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-globe"></i>
+      <h3>Global Impact</h3>
+      <p>Join a network of green leaders creating a sustainable world.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonial">
+      <p>"EcoFlow helped us cut down on energy bills while supporting the planet!"</p>
+      <strong>- Sarah, Small Business Owner</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Easy installation, excellent support. Highly recommend their services!"</p>
+      <strong>- Raj, Homeowner</strong>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="plan">
+      <h3>Basic</h3>
+      <p>$99/month</p>
+      <ul>
+        <li>5 Solar Panels</li>
+        <li>Monitoring Dashboard</li>
+        <li>Email Support</li>
+      </ul>
+      <button class="btn">Choose Plan</button>
+    </div>
+    <div class="plan">
+      <h3>Pro</h3>
+      <p>$199/month</p>
+      <ul>
+        <li>10 Solar Panels</li>
+        <li>Advanced Battery Storage</li>
+        <li>24/7 Support</li>
+      </ul>
+      <button class="btn">Choose Plan</button>
+    </div>
+    <div class="plan">
+      <h3>Enterprise</h3>
+      <p>Contact Us</p>
+      <ul>
+        <li>Custom Installations</li>
+        <li>Dedicated Manager</li>
+        <li>Full Automation</li>
+      </ul>
+      <button class="btn">Get a Quote</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align: center; margin-bottom: 20px;">Contact Us</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EcoFlow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      alert("Thank you for contacting EcoFlow! We'll get back to you soon.");
+      return false; // prevent actual submission for demo
+    }
+  </script>
+</body>
+</html>
