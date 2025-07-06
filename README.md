@@ -13,7 +13,6 @@ A clean, modern, and fully responsive landing page for a fictional green energy 
 - Netlify
 - Vercel
 
-> 💡 Replace this line with your hosted link when deployed.
 
 ---
 
@@ -86,3 +85,10 @@ This project is free to use for personal, educational, and portfolio purposes.
 - Fonts by [Google Fonts](https://fonts.google.com/)
 - Icons by [Font Awesome](https://fontawesome.com/)
 - Background image from [Unsplash](https://unsplash.com/)
+
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/cc5a69c6-7cce-4363-a410-b2198c73f943)
+![image](https://github.com/user-attachments/assets/2c907c3e-72f7-4499-a1f2-acba8cc6449e)
+
+
